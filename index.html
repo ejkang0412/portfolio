@@ -643,6 +643,64 @@ body{
   from{opacity:0;transform:translateY(20px);}
   to{opacity:1;transform:translateY(0);}
 }
+    /* =========================
+   Project #01 한 화면 최적화
+   - 개요/핵심기여 2단
+   - 여백/폰트 미세 압축
+   ========================= */
+
+/* 2단 그리드 */
+.project-sections-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;                 /* 32 -> 조금 축소 */
+}
+
+/* 리스트/뱃지 간격 압축 */
+.project-sections-grid .project-section{
+  margin-bottom: 0;          /* 기존 margin-bottom 제거 */
+}
+.project-sections-grid .project-section-badge{
+  margin-bottom: 12px;       /* 16 -> 축소 */
+}
+.project-sections-grid .project-section-list li{
+  font-size: 14px;           /* 15 -> 축소 */
+  line-height: 1.65;         /* 1.8 -> 축소 */
+  margin-bottom: 8px;        /* 12 -> 축소 */
+}
+
+/* 상단(타이틀/회사/배지)도 살짝 압축해서 한 화면에 더 잘 들어오게 */
+.project-detail{
+  padding: 80px 0;           /* 100 -> 축소(원하면 더 줄여도 됨) */
+}
+.project-detail-title{
+  font-size: 28px;           /* 32 -> 축소 */
+  margin-bottom: 6px;
+}
+.project-detail-company{
+  margin-bottom: 22px;       /* 32 -> 축소 */
+}
+.project-info-badges{
+  gap: 12px;                 /* 16 -> 축소 */
+  margin-bottom: 18px;       /* 32 -> 축소 */
+}
+.project-badge{
+  padding: 10px 16px;        /* 12 20 -> 축소 */
+  border-radius: 16px;       /* 20 -> 축소 */
+}
+.badge-text{
+  font-size: 14px;           /* 15 -> 축소 */
+  line-height: 1.6;
+}
+
+/* 화면이 좁아지면 1단으로 자동 전환 */
+@media (max-width: 968px){
+  .project-sections-grid{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+}
+
   </style>
 </head>
 
@@ -755,8 +813,8 @@ body{
                 <div class="info-head-line"></div>
               </div>
               <ul class="info-list">
-                <li>✓ 데이터 기반 인재 소싱 프로젝트</li>
-                <li>✓ 채용 프로세스 기획·운영 경험</li>
+                <li>✓ 전략적 다이렉트 소싱 참여</li>
+                <li>✓ 자체 인텔리전스 플랫폼 데이터 고도화(인재DB + 게임DB)</li>
                 <li>✓ 친환경 창업 프로젝트 'Pill Good'</li>
               </ul>
             </div>
@@ -944,30 +1002,28 @@ body{
             </div>
           </div>
 
-          <div class="project-sections">
-            <div class="project-section">
-              <div class="project-section-badge project-section-badge-yellow">개요</div>
-              <ul class="project-section-list">
-                <li>✓ 기간: 2025.12 ~ 진행중</li>
-                <li>✓ 역할: 다이렉트 소싱 실무 지원<br />
-                  &nbsp;&nbsp;&nbsp;&nbsp;(후보자 서치·프로필 분석·롱리스트 정리·컨택 메시지 초안)</li>
-                <li>✓ 팀 구성: Senior TA / Hiring Manager / 본인</li>
-                <li>✓ 목표: JD 기반으로 검토 가능한 롱리스트를 빠르게 구성하여 신사업 채용 초기 의사결정 지원</li>
-              </ul>
-            </div>
+<div class="project-sections project-sections-grid">
+  <div class="project-section">
+    <div class="project-section-badge project-section-badge-yellow">개요</div>
+    <ul class="project-section-list">
+      <li>✓ 기간: 2025.12 ~ 진행중</li>
+      <li>✓ 역할: 다이렉트 소싱 실무 지원<br />
+        &nbsp;&nbsp;&nbsp;&nbsp;(후보자 서치·프로필 분석·롱리스트 정리·컨택 메시지 초안)</li>
+      <li>✓ 팀 구성: Senior TA / Hiring Manager / 본인</li>
+      <li>✓ 목표: JD 기반으로 검토 가능한 롱리스트를 빠르게 구성하여 신사업 채용 초기 의사결정 지원</li>
+    </ul>
+  </div>
 
-            <div class="project-section">
-              <div class="project-section-badge project-section-badge-yellow">핵심기여</div>
-              <ul class="project-section-list">
-                <li>✓ 포지션 타겟 정의: 신사업 맥락 기반 JD 핵심 요건 재정리, 산업 / 직급 / 경력 포인트 기준 서치 범위 설정</li>
-                <li>✓ 후보자 분석 및 롱리스트 구성: 경력 나열이 아닌 적합 포인트·리스크 요약, Hiring Manager 관점의 검토 자료 정리</li>
-                <li>✓ 다이렉트 소싱 컨택 지원: 후보자 이력 기반 개인화 메시지 초안 작성, '채용 제안'이 아닌 포지션 탐색 톤 유지</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="project-section">
+    <div class="project-section-badge project-section-badge-yellow">핵심기여</div>
+    <ul class="project-section-list">
+      <li>✓ 포지션 타겟 정의: 신사업 맥락 기반 JD 핵심 요건 재정리, 산업 / 직급 / 경력 포인트 기준 서치 범위 설정</li>
+      <li>✓ 후보자 분석 및 롱리스트 구성: 경력 나열이 아닌 적합 포인트·리스크 요약, Hiring Manager 관점의 검토 자료 정리</li>
+      <li>✓ 다이렉트 소싱 컨택 지원: 후보자 이력 기반 개인화 메시지 초안 작성, '채용 제안'이 아닌 포지션 탐색 톤 유지</li>
+    </ul>
+  </div>
+</div>
+
   </section>
 
   <!-- Contact -->
