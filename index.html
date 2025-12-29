@@ -700,6 +700,63 @@ body{
     gap: 18px;
   }
 }
+/* =========================
+   Project 영역: 더 넓게 쓰기 (100% 화면 최적화)
+   ========================= */
+
+/* 1) 좌/우 레이아웃: 오른쪽을 더 넓게, 간격 줄이기 */
+.project-detail-layout{
+  grid-template-columns: 340px 1fr;  /* 기존 1fr 2fr 보다: 좌측 고정폭 / 우측 최대 */
+  gap: 56px;                         /* 80 -> 줄여서 우측 공간 확보 */
+}
+
+/* 2) 오른쪽 패딩 제거(실제로 너 오른쪽이 안 넓어 보이는 주범) */
+.project-detail-right{
+  padding-left: 0;                   /* 기존 40px 제거 */
+}
+
+/* 3) 상단 배지(프로젝트명/주요목표) 영역이 더 “가로로” 차지하도록 */
+.project-info-badges{
+  width: 100%;
+  max-width: 860px;                  /* 필요하면 900~1000까지 올려도 됨 */
+  margin-bottom: 22px;               /* 너무 뜨면 줄이기 */
+}
+
+/* 배지 자체도 약간 더 넓게 보이게 */
+.project-badge{
+  width: 100%;
+}
+
+/* 4) 개요/핵심 2단: 더 넓게(지금 너무 가운데에 몰림) */
+.project-sections-grid{
+  grid-template-columns: 1fr 1fr;
+  gap: 44px;                         /* 28 -> 넓혀서 파란/주황 영역 확장 */
+  max-width: 980px;                  /* 전체 폭 상한(너무 퍼지면 줄바꿈 과해질 수 있음) */
+}
+
+/* 5) 글 가독성: 한 화면에서 줄바꿈이 과하면 line-height만 살짝 */
+.project-sections-grid .project-section-list li{
+  line-height: 1.75;
+}
+
+/* 6) 큰 화면에서 더 시원하게 (선택) */
+@media (min-width: 1200px){
+  .project-info-badges{ max-width: 980px; }
+  .project-sections-grid{ max-width: 1100px; }
+}
+
+/* 7) 태블릿 이하에서는 기존처럼 1단 */
+@media (max-width: 968px){
+  .project-detail-layout{
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .project-sections-grid{
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 20px;
+  }
+}
 
   </style>
 </head>
