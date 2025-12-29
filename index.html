@@ -766,6 +766,28 @@ body{
   max-width: none;
   width: 100%;
 }
+/* ===== Project 왼쪽 이미지(빈 공간 채우기) ===== */
+.project-visual{
+  margin-top: 36px;
+  width: 100%;
+  height: 320px;                 /* 원하는 높이로 조절 */
+  border-radius: 18px;
+  overflow: hidden;
+  background: #3f3f3f;           /* 이미지 없을 때도 빈 박스 느낌 */
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-visual-img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;             /* 꽉 채우기(크롭) */
+  display: block;
+}
+
+/* 모바일에서는 아래로 내려가니까 높이만 살짝 줄이기 */
+@media (max-width: 968px){
+  .project-visual{ height: 220px; }
+}
 
   </style>
 </head>
@@ -1051,6 +1073,9 @@ body{
           <h3 class="project-number-large"># 01</h3>
           <div class="project-number-underline"></div>
           <p class="project-intro">진행 프로젝트 소개</p>
+            <div class="project-visual">
+    <img src="project01.jpg" alt="Project 01 이미지" class="project-visual-img">
+  </div>
         </div>
 
         <div class="project-detail-right">
