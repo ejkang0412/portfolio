@@ -354,4 +354,760 @@ body{
 .skills-content::before{
   content:'';
   position:absolute;
-  le
+  left:50%;
+  top:0;bottom:0;
+  width:1px;
+  background-color:var(--border-color);
+  transform:translateX(-50%);
+}
+.skills-column-title{
+  font-size:24px;
+  font-weight:600;
+  color:var(--text-color);
+  margin-bottom:40px;
+}
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:32px;
+  margin-bottom:32px;
+}
+.skill-item{text-align:center;}
+.skill-circle{position:relative;width:120px;height:120px;margin:0 auto 16px;}
+.skill-svg{width:100%;height:100%;transform:rotate(-90deg);}
+.skill-bg{fill:none;stroke:var(--bg-light);stroke-width:8;}
+.skill-progress{
+  fill:none;
+  stroke-width:8;
+  stroke-linecap:round;
+  stroke-dasharray:283;
+  stroke-dashoffset:283;
+  transition:stroke-dashoffset 1s ease;
+}
+.skill-progress-teal{stroke:var(--teal-color);}
+.skill-progress-yellow{stroke:var(--accent-yellow);}
+.skill-percent{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-size:20px;
+  font-weight:700;
+  color:var(--text-color);
+  font-family:var(--font-en);
+}
+.skill-name{font-size:14px;color:var(--text-light);font-weight:500;}
+.skills-description{
+  font-size:14px;
+  color:var(--text-gray);
+  line-height:1.6;
+  margin-top:24px;
+}
+
+/* Timeline Section */
+.timeline{
+  background-color:var(--bg-dark);
+  padding:100px 0;
+}
+.timeline-layout{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;
+  align-items:start;
+}
+.timeline-left{position:relative;padding-left:40px;}
+.timeline-line{
+  position:absolute;
+  left:20px;top:0;bottom:0;
+  width:2px;
+  background-color:var(--border-color);
+}
+.timeline-items{display:flex;flex-direction:column;gap:40px;}
+.timeline-item{position:relative;display:flex;align-items:flex-start;gap:24px;}
+.timeline-dot{
+  width:16px;height:16px;border-radius:50%;
+  position:absolute;left:-28px;top:4px;z-index:1;
+}
+.timeline-dot-yellow{background-color:var(--accent-yellow);}
+.timeline-dot-teal{background-color:var(--teal-color);}
+.timeline-content{flex:1;}
+.timeline-date{
+  color:var(--accent-yellow);
+  font-size:14px;
+  font-weight:600;
+  display:block;
+  margin-bottom:8px;
+}
+.timeline-project{color:var(--text-color);font-size:16px;font-weight:500;margin-bottom:4px;}
+.timeline-role{color:var(--text-light);font-size:14px;}
+.timeline-right{text-align:right;}
+.timeline-title{
+  font-size:72px;
+  font-weight:700;
+  color:var(--accent-yellow);
+  font-family:var(--font-en);
+  line-height:1;
+  margin-bottom:8px;
+}
+.timeline-title-underline{
+  width:60px;height:4px;
+  background-color:var(--accent-yellow);
+  margin-left:auto;
+  margin-bottom:16px;
+}
+.timeline-subtitle{font-size:18px;color:var(--text-light);}
+
+/* Project Detail Section */
+.project-detail{
+  background-color:var(--bg-darker);
+  padding:100px 0;
+}
+.project-detail-layout{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:80px;
+  align-items:start;
+}
+.project-detail-left{text-align:left;}
+.project-number{
+  font-size:32px;
+  font-weight:700;
+  color:var(--accent-yellow);
+  font-family:var(--font-en);
+  margin-bottom:8px;
+}
+.project-number-large{
+  font-size:64px;
+  font-weight:700;
+  color:var(--text-color);
+  font-family:var(--font-en);
+  margin-bottom:8px;
+}
+.project-number-underline{width:60px;height:4px;background-color:var(--accent-yellow);margin-bottom:16px;}
+.project-intro{font-size:16px;color:var(--text-light);}
+.project-detail-right{padding-left:40px;}
+.project-detail-title{font-size:32px;font-weight:600;color:var(--text-color);margin-bottom:8px;}
+.project-detail-company{font-size:16px;color:var(--text-light);margin-bottom:32px;font-family:var(--font-en);}
+.project-info-badges{display:flex;flex-direction:column;gap:16px;margin-bottom:32px;}
+.project-badge{padding:12px 20px;border-radius:20px;display:flex;flex-direction:column;gap:8px;}
+.project-badge-gray{background-color:var(--bg-light);}
+.badge-label{font-size:13px;color:var(--text-light);font-weight:500;}
+.badge-text{font-size:15px;color:var(--text-color);}
+.project-sections{display:flex;flex-direction:column;gap:32px;}
+.project-section{margin-bottom:24px;}
+.project-section-badge{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:20px;
+  font-size:14px;
+  font-weight:600;
+  color:var(--text-color);
+  margin-bottom:16px;
+}
+.project-section-badge-yellow{background-color:var(--accent-yellow);color:var(--bg-dark);}
+.project-section-list{list-style:none;padding:0;margin:0;}
+.project-section-list li{color:var(--text-light);font-size:15px;line-height:1.8;margin-bottom:12px;padding-left:0;}
+
+/* Contact Section */
+.contact{
+  background-color:var(--accent-yellow-light);
+  padding:100px 0;
+  color:var(--text-dark);
+  text-align:center;
+}
+.contact-content{max-width:800px;margin:0 auto;padding:0 24px;}
+.contact-main-text{
+  font-size:clamp(32px,5vw,48px);
+  font-weight:700;
+  color:var(--text-dark);
+  margin-bottom:16px;
+  line-height:1.4;
+}
+.contact-sub-text{font-size:20px;color:var(--text-dark);margin-bottom:24px;opacity:0.9;}
+.contact-description{font-size:16px;color:var(--text-dark);line-height:1.8;margin-bottom:60px;opacity:0.85;}
+.contact-footer{margin-top:60px;}
+.contact-line{
+  width:100%;
+  max-width:600px;
+  height:2px;
+  background-color:var(--text-dark);
+  margin:0 auto 20px;
+  position:relative;
+}
+.contact-line::after{
+  content:'✏️';
+  position:absolute;
+  right:0;top:50%;
+  transform:translateY(-50%);
+  font-size:20px;
+}
+.contact-info{
+  display:flex;
+  justify-content:space-between;
+  max-width:600px;
+  margin:0 auto;
+  font-size:16px;
+  color:var(--text-dark);
+}
+
+/* Footer */
+.footer{
+  padding:40px 0;
+  text-align:center;
+  border-top:1px solid var(--border-color);
+  color:var(--text-light);
+  font-size:14px;
+  background-color:var(--bg-darker);
+}
+
+/* Responsive Design */
+@media (max-width: 968px){
+  .about-layout,
+  .skills-content,
+  .timeline-layout,
+  .project-detail-layout{
+    grid-template-columns:1fr;
+    gap:60px;
+  }
+  .skills-content::before{display:none;}
+  .timeline-left{padding-left:0;}
+  .timeline-line{left:0;}
+  .timeline-dot{left:-8px;}
+  .timeline-right{text-align:left;}
+  .timeline-title-underline{margin-left:0;}
+  .project-detail-right{padding-left:0;}
+  .skills-grid{grid-template-columns:repeat(3,1fr);gap:24px;}
+
+  /* About right responsive */
+  .about-right-top{
+    grid-template-columns:1fr;
+    gap:20px;
+    justify-items:center;
+  }
+  .profile-info{width:100%;}
+  .about-right-bottom{
+    grid-template-columns:1fr;
+    gap:28px;
+  }
+}
+
+@media (max-width: 768px){
+  .nav-menu{
+    position:fixed;
+    top:70px;left:0;right:0;
+    background-color:var(--bg-darker);
+    flex-direction:column;
+    padding:24px;
+    border-bottom:1px solid var(--border-color);
+    transform:translateY(-100%);
+    opacity:0;
+    visibility:hidden;
+    transition:var(--transition);
+  }
+  .nav-menu.active{
+    transform:translateY(0);
+    opacity:1;
+    visibility:visible;
+  }
+  .nav-toggle{display:flex;}
+  .nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(8px, 8px);}
+  .nav-toggle.active span:nth-child(2){opacity:0;}
+  .nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(7px, -7px);}
+
+  .about-title{font-size:48px;}
+  .timeline-title{font-size:48px;}
+  .skills-main-title{font-size:36px;}
+  .skills-grid{grid-template-columns:1fr;gap:32px;}
+  section{padding:60px 0;}
+}
+
+@media (max-width: 480px){
+  .container{padding:0 16px;}
+  .nav-container{padding:0 16px;}
+  .hero-contact-info,
+  .contact-info{
+    flex-direction:column;
+    gap:12px;
+    text-align:center;
+  }
+  .about-title{font-size:36px;}
+  .timeline-title{font-size:36px;}
+
+  .profile-photo,
+  .profile-photo-fallback{
+    width:190px;height:190px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">강은정</a>
+      <button class="nav-toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-menu">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#timeline" class="nav-link">Timeline</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <p class="hero-main-text">
+        사랑하는 일을 찾는 과정은<br />
+        사람을 이해하는 일에서<br />
+        시작된다고 믿는, 강은정입니다.
+      </p>
+      <p class="hero-sub-text">
+        사람을 이해하는 시선으로 기획하고, 운영하며, 문제를 해결해온 과정입니다.
+      </p>
+      <div class="hero-contact">
+        <div class="hero-contact-line"></div>
+        <div class="hero-contact-info">
+          <span class="hero-email">ejkang0412@naver.com</span>
+          <span class="hero-phone">010-2191-3831</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About (UPDATED STRUCTURE) -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-layout">
+
+        <!-- Left Column -->
+        <div class="about-left">
+          <h2 class="about-title">
+            <span class="about-title-line1">About</span>
+            <span class="about-title-line2">Me</span>
+            <span class="about-title-underline"></span>
+          </h2>
+
+          <div class="about-text">
+            <p>저는 채용 운영과 인재 소싱을 지원해온 카카오엔터 TA Assistant 지원자, 강은정입니다.</p>
+            <p>JD 분석 기반 후보자 탐색과 데이터 정리, 채용 운영 지원을 통해 채용 프로세스를 실무 관점에서 경험했습니다.</p>
+            <p>기준의 명확함과 운영의 안정성이 채용 결과의 신뢰로 이어진다고 생각하며, 지원자 경험의 작은 접점까지도 세심하게 관리하고자 합니다.</p>
+          </div>
+        </div>
+
+        <!-- Right Column (스샷 구조) -->
+        <div class="about-right">
+
+          <!-- 상단: 사진 / 정보 -->
+          <div class="about-right-top">
+            <div class="profile-photo-wrap">
+              <img
+                src="profile.jpg"
+                alt="강은정 프로필 사진"
+                class="profile-photo"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              />
+              <div class="profile-photo-fallback" style="display:none;">👤</div>
+            </div>
+
+            <div class="profile-info">
+              <div class="profile-name-row">
+                <span class="profile-name-kr">강은정</span>
+                <span class="profile-name-en">Kang Eunjeong</span>
+              </div>
+
+              <div class="profile-line"></div>
+
+              <div class="profile-contact">
+                <div class="contact-item"><span class="contact-icon">📞</span><span>010-2191-3831</span></div>
+                <div class="contact-item"><span class="contact-icon">✉️</span><span>ejkang0412@naver.com</span></div>
+                <div class="contact-item"><span class="contact-icon">📅</span><span>2003.10.09</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 하단: 학력 / Key Projects -->
+          <div class="about-right-bottom">
+            <div class="info-section">
+              <div class="info-head">
+                <h4 class="info-title">학력사항</h4>
+                <div class="info-head-line"></div>
+              </div>
+              <ul class="info-list">
+                <li>✓ 부영여자고등학교 졸업</li>
+                <li>✓ 경기대학교 경영학과/AI융합경영 복수전공 재학</li>
+              </ul>
+            </div>
+
+            <div class="info-section">
+              <div class="info-head">
+                <h4 class="info-title">Key Projects</h4>
+                <div class="info-head-line"></div>
+              </div>
+              <ul class="info-list">
+                <li>✓ 데이터 기반 인재 소싱 프로젝트</li>
+                <li>✓ 채용 프로세스 기획·운영 경험</li>
+                <li>✓ 친환경 창업 프로젝트 'Pill Good'</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2 class="skills-main-title">Core Skills</h2>
+      <p class="skills-subtitle">강점을 만드는 기술과 역량</p>
+
+      <div class="skills-content">
+        <div class="skills-column">
+          <h3 class="skills-column-title">프로그램 사용능력</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="85" data-color="teal">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-teal" cx="50" cy="50" r="45" data-percent="85"></circle>
+                </svg>
+                <span class="skill-percent">85%</span>
+              </div>
+              <p class="skill-name">Excel</p>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="85" data-color="teal">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-teal" cx="50" cy="50" r="45" data-percent="85"></circle>
+                </svg>
+                <span class="skill-percent">85%</span>
+              </div>
+              <p class="skill-name">Notion</p>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="95" data-color="teal">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-teal" cx="50" cy="50" r="45" data-percent="95"></circle>
+                </svg>
+                <span class="skill-percent">95%</span>
+              </div>
+              <p class="skill-name">Canva</p>
+            </div>
+          </div>
+          <p class="skills-description">업무 목적에 맞는 도구를 선택해 활용하며, 효율적인 작업 환경을 만들어가고 있습니다.</p>
+        </div>
+
+        <div class="skills-column">
+          <h3 class="skills-column-title">실무 수행 역량</h3>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="95" data-color="yellow">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-yellow" cx="50" cy="50" r="45" data-percent="95"></circle>
+                </svg>
+                <span class="skill-percent">95%</span>
+              </div>
+              <p class="skill-name">커뮤니케이션</p>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="95" data-color="yellow">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-yellow" cx="50" cy="50" r="45" data-percent="95"></circle>
+                </svg>
+                <span class="skill-percent">95%</span>
+              </div>
+              <p class="skill-name">문제해결능력</p>
+            </div>
+
+            <div class="skill-item">
+              <div class="skill-circle" data-percent="98" data-color="yellow">
+                <svg class="skill-svg">
+                  <circle class="skill-bg" cx="50" cy="50" r="45"></circle>
+                  <circle class="skill-progress skill-progress-yellow" cx="50" cy="50" r="45" data-percent="98"></circle>
+                </svg>
+                <span class="skill-percent">98%</span>
+              </div>
+              <p class="skill-name">프로젝트 기획&운영</p>
+            </div>
+          </div>
+          <p class="skills-description">원활한 커뮤니케이션을 바탕으로 문제를 해결하고 프로젝트를 끝까지 운영합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="timeline">
+    <div class="container">
+      <div class="timeline-layout">
+        <div class="timeline-left">
+          <div class="timeline-line"></div>
+          <div class="timeline-items">
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot-yellow"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024.09 ~ 2025.09</span>
+                <p class="timeline-project">경기대학교 인사학회 KAH</p>
+                <p class="timeline-role">4기 부학회장</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot-teal"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2024.09 ~ 2025.11</span>
+                <p class="timeline-project">친환경 창업 프로젝트 'Pill Good'</p>
+                <p class="timeline-role">총괄</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot-yellow"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.03 ~ 2025.08</span>
+                <p class="timeline-project">경기대학교 도서관 서포터즈 Friends</p>
+                <p class="timeline-role">부리더</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot-teal"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.08</span>
+                <p class="timeline-project">SGB 싱가포르 해외연수</p>
+                <p class="timeline-role">기장</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-dot timeline-dot-yellow"></div>
+              <div class="timeline-content">
+                <span class="timeline-date">2025.09 ~ 재직중</span>
+                <p class="timeline-project">스마일게이트</p>
+                <p class="timeline-role">TR팀 사무 보조</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-right">
+          <h2 class="timeline-title">Projects<br />Timeline</h2>
+          <div class="timeline-title-underline"></div>
+          <p class="timeline-subtitle">걸어온 길</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Detail -->
+  <section id="projects" class="project-detail">
+    <div class="container">
+      <div class="project-detail-layout">
+        <div class="project-detail-left">
+          <h2 class="project-number">Project</h2>
+          <h3 class="project-number-large"># 01</h3>
+          <div class="project-number-underline"></div>
+          <p class="project-intro">진행 프로젝트 소개</p>
+        </div>
+
+        <div class="project-detail-right">
+          <h3 class="project-detail-title">신사업 팀장급 다이렉트 소싱 지원</h3>
+          <p class="project-detail-company">Smilegate Holdings | Talent Relations Team</p>
+
+          <div class="project-info-badges">
+            <div class="project-badge project-badge-gray">
+              <span class="badge-label">프로젝트명</span>
+              <span class="badge-text">신사업 '재무팀장급' 포지션 다이렉트 소싱 지원</span>
+            </div>
+            <div class="project-badge project-badge-gray">
+              <span class="badge-label">주요목표</span>
+              <span class="badge-text">시장 내 타겟 후보자 풀을 빠르게 정의하고, JD 기반 롱리스트를 구성해 Hiring Manager의 초기 의사결정을 지원</span>
+            </div>
+          </div>
+
+          <div class="project-sections">
+            <div class="project-section">
+              <div class="project-section-badge project-section-badge-yellow">개요</div>
+              <ul class="project-section-list">
+                <li>✓ 기간: 2025.12 ~ 진행중</li>
+                <li>✓ 역할: 다이렉트 소싱 실무 지원<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;(후보자 서치·프로필 분석·롱리스트 정리·컨택 메시지 초안)</li>
+                <li>✓ 팀 구성: Senior TA / Hiring Manager / 본인</li>
+                <li>✓ 목표: JD 기반으로 검토 가능한 롱리스트를 빠르게 구성하여 신사업 채용 초기 의사결정 지원</li>
+              </ul>
+            </div>
+
+            <div class="project-section">
+              <div class="project-section-badge project-section-badge-yellow">핵심기여</div>
+              <ul class="project-section-list">
+                <li>✓ 포지션 타겟 정의: 신사업 맥락 기반 JD 핵심 요건 재정리, 산업 / 직급 / 경력 포인트 기준 서치 범위 설정</li>
+                <li>✓ 후보자 분석 및 롱리스트 구성: 경력 나열이 아닌 적합 포인트·리스크 요약, Hiring Manager 관점의 검토 자료 정리</li>
+                <li>✓ 다이렉트 소싱 컨택 지원: 후보자 이력 기반 개인화 메시지 초안 작성, '채용 제안'이 아닌 포지션 탐색 톤 유지</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="contact-content">
+        <p class="contact-main-text">경청해 주셔서 감사합니다.</p>
+        <p class="contact-sub-text">함께 더 나은 디지털 경험을 만들기 위해 -</p>
+        <p class="contact-description">
+          데이터 기반의 채용 전략과 인간 중심의 접근으로<br />
+          인재와 조직이 함께 성장하는 영입 경험을 디자인합니다.
+        </p>
+
+        <div class="contact-footer">
+          <div class="contact-line"></div>
+          <div class="contact-info">
+            <span class="contact-email">ejkang0412@naver.com</span>
+            <span class="contact-phone">010-2191-3831</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 강은정. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+/* Mobile Navigation Toggle */
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+navToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+  navToggle.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navMenu.classList.remove('active');
+    navToggle.classList.remove('active');
+  });
+});
+
+/* Smooth scroll */
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const targetPosition = target.offsetTop - navHeight;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
+
+/* Intersection Observer for scroll animations */
+const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+
+document.querySelectorAll('section').forEach(section => {
+  section.style.opacity = '0';
+  section.style.transform = 'translateY(20px)';
+  section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+  observer.observe(section);
+});
+
+/* Navbar background on scroll */
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll > 100) {
+    nav.style.backgroundColor = 'rgba(54, 54, 54, 0.98)';
+    nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
+  } else {
+    nav.style.backgroundColor = 'rgba(54, 54, 54, 0.95)';
+    nav.style.boxShadow = 'none';
+  }
+});
+
+/* Active nav link */
+const sections = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const scrollY = window.pageYOffset;
+  const navHeight = nav.offsetHeight;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - navHeight - 50;
+    const sectionId = section.getAttribute('id');
+
+    if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${sectionId}`) link.classList.add('active');
+      });
+    }
+  });
+});
+
+const style = document.createElement('style');
+style.textContent = `
+  .nav-link.active { color: var(--accent-yellow); }
+  .nav-link.active::after { width: 100%; }
+`;
+document.head.appendChild(style);
+
+/* Skill circle animation */
+const animateSkills = () => {
+  const skillCircles = document.querySelectorAll('.skill-progress');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const circle = entry.target;
+        const percent = parseFloat(circle.getAttribute('data-percent'));
+        const circumference = 2 * Math.PI * 45;
+        const offset = circumference - (percent / 100) * circumference;
+        circle.style.strokeDashoffset = offset;
+        obs.unobserve(circle);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  skillCircles.forEach(circle => obs.observe(circle));
+};
+window.addEventListener('load', animateSkills);
+  </script>
+</body>
+</html>
