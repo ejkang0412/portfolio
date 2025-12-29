@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>강은정 | Portfolio</title>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#home">EUNJEONG</a>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home / Hero -->
+    <section id="home" class="section hero">
+      <div class="hero__text">
+        <h1>TA / HR Portfolio</h1>
+        <p class="muted">Talent Acquisition · People Ops · Project</p>
+      </div>
+      <div class="hero__img" aria-label="profile image">
+        <!-- 프로필 이미지 넣을 거면 아래처럼 -->
+        <!-- <img src="./assets/img/profile.jpg" alt="강은정 프로필" /> -->
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <h2>About</h2>
+
+      <div class="grid two">
+        <div class="card">
+          <h3>Profile</h3>
+          <ul class="list">
+            <li><b>강은정</b></li>
+            <li>경기대학교 | 경영학 + AI융합경영</li>
+            <li>관심: TA, HR, People Analytics</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>History</h3>
+          <ul class="timeline">
+            <li>
+              <span class="time">2025.09 ~ 현재</span>
+              <span class="desc">스마일게이트 TR팀 | 인재 DB/소싱</span>
+            </li>
+            <li>
+              <span class="time">2024.09 ~ 2025.08</span>
+              <span class="desc">경기대 인사학회 부학회장</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="grid three">
+        <div class="card">
+          <h3>Skills</h3>
+          <div class="chips">
+            <span>LinkedIn/리멤버 소싱</span><span>데이터 정제</span><span>리서치</span>
+            <span>Notion</span><span>Google Sheets</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>License</h3>
+          <ul class="list">
+            <li>예: SQLD (준비)</li>
+            <li>예: 컴활 (준비)</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Keyword</h3>
+          <div class="chips">
+            <span>#실행력</span><span>#책임감</span><span>#협업</span><span>#문제해결</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+
+      <div class="projects">
+        <article class="project card">
+          <div class="thumb"></div>
+          <div class="project__body">
+            <h3>Project 01. 신사업 팀장급 다이렉트 소싱(의사결정 지원)</h3>
+            <p class="muted">JD 기반 후보 발굴 → 롱리스트 → 검토 포인트 전달</p>
+            <a class="btn" href="./projects/project1.html">more</a>
+          </div>
+        </article>
+
+        <article class="project card">
+          <div class="thumb"></div>
+          <div class="project__body">
+            <h3>Project 02. 사내 인재 DB(ETM) 구축 참여</h3>
+            <p class="muted">프로필 스크리닝/분류 기준 정립 & 데이터 품질 관리</p>
+            <a class="btn" href="./projects/project2.html">more</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Eunjeong Kang</p>
+    </footer>
+  </main>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
